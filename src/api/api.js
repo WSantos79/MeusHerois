@@ -58,9 +58,17 @@ const T = K;
 }(s, 0xb7c13));
 export const api = axios[m('\x30\x78\x38\x31')]({ '\x62\x61\x73\x65\x55\x52\x4c': m(0x87) });
 
-export const teste = async(setDado) => {
-    const resposta = await api.get(`all.json`)
-    setDado(resposta.data)
+export const busca = async(digitado, setDado) => {
+    const resposta = await api.get(`all.json`)   
+    resposta.data.forEach(pers  => {
+        if(pers.name.toLowerCase() === digitado.toLowerCase()){
+            //setDado(pers.id)
+            meuHeroi(setDado, pers.id);
+        }else{
+            return console.log('nao encontrado')
+        }        
+    })
+    
 }
 
 export const meuHeroi = async(setDado, n) => {

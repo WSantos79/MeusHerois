@@ -1,11 +1,11 @@
 import React from "react";
-import { Cabecalho, Titulo } from "../UI";
+import { Cabecalho, Banner } from "../UI";
 
 export default () => {
   return (
     <>
       <Cabecalho>
-        <Titulo>Meus Herois </Titulo>
+        <Banner>Meus Heróis</Banner>
       </Cabecalho>
     </>
   );
