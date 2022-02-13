@@ -71,9 +71,9 @@ export default () => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
       //busca(digitado);  
-      console.log('fui executado aqui')
+     // console.log('fui executado aqui')
     }
-    console.log('to aqui')
+  //  console.log('to aqui')
     busca(digitado, setHeroi);
   //  console.log(count);  
   }, [digitado]);   

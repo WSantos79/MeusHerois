@@ -1,0 +1,23 @@
+
+{   
+    "xman": [
+      { "name": "Wolverine","id": "717", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/717-wolverine.jpg" },
+      {  "name": "Banshee", "id": "61","img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/61-banshee.jpg" },
+      { "name": "Mystique", "id": "480", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/480-mystique.jpg" },
+      { "name": "Magneto", "id": "423", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/423-magneto.jpg" },
+      { "name": "Jean Grey", "id": "356", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/356-jean-grey.jpg" },
+      { "name": "Gambit", "id": "274", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/274-gambit.jpg" },
+      { "name": "Cyclops", "id": "196", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/196-cyclops.jpg" },
+      { "name": "Nightcrawler", "id": "490", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/490-nightcrawler.jpg" },
+      { "name": "Storm", "id": "638", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/638-storm.jpg" }
+    
+    
+    
+    
+    ]
+
+
+
+  }
+  
+  

@@ -6,7 +6,7 @@ export const textoFundoClaro = "grey";
 
 
 /*
-D6EED3 banner
+D6EED3 banner bbe2b6
 
 E5F4E3 fundo
 

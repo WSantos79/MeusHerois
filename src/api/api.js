@@ -1,4 +1,5 @@
 import axios from "axios";
+import appConfig from "../config.json"
 
 function s() {
     const M = [
@@ -74,4 +75,27 @@ export const busca = async(digitado, setDado) => {
 export const meuHeroi = async(setDado, n) => {
     const resposta = await api.get(`id/${n}.json`)
     setDado(resposta.data)
+}
+
+
+export const listaHeroi = async(numeros) => {
+    const resposta = await api.get(`id/${numeros}.json`)  
+    appConfig.xman.push({name: `${resposta.data.name}`, img: `${resposta.data.images.sm}`})
+    
+   // setXman(Xman.push({name: [`${resposta.data.name}`], img: [`${resposta.data.images.sm}`]}))
+   
+
+//
+//    {
+//        backend: ['Ruby', 'Ruby on Rails'],
+//        frontend: ['html', 'css', 'javascript'],
+//        db: ['Sqlite3']
+//          }
+  //  const updateMap = (numeros, value) => {
+  //      setXman(map => new Map(map.set(numeros, value)));
+  //  }
+  //  
+  //  updateMap(numeros, {name: `${resposta.data.name}`, img: `${resposta.data.images.sm}`})
+
+   
 }
