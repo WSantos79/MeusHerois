@@ -14,6 +14,7 @@ const H1 = styled.h1`
     margin: 0;
     margin-left: 2.5rem;
 `
+
 const CaixaCard = styled.div`
     border: 1px outset #000000;
     margin: 7px;
@@ -26,23 +27,20 @@ const CaixaCard = styled.div`
     }
     &:hover ~ &, &:focus ~ &{
         transform: translateX(25%);      
-    }
-    
+    }    
 `
-
 const Div = styled.div`
     display: flex;
     & ${CaixaCard}:hover, &:focus ${CaixaCard} {
-        transform: scale(1.5);
+        transform: scale(1.5) ;
         z-index: 1;
         cursor: pointer;
     }
-    &:hover ${CaixaCard}, &:focus-within ${CaixaCard} {
-      //  transform: translateX(-25%);
-    }
-    
-    
+    &:hover > * , &:focus-within > *  {
+        transform: translateX(-25%);        
+    }   
 `;
+
 const CardSecundario = styled.figure`
     margin: 10px;
     padding: 0;
