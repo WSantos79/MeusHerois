@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { corBanner } from "../UI/variaveis"
+import { corBanner, corPrimaria } from "../UI/variaveis"
 
 
 /* Cabeçalho */
@@ -8,7 +8,7 @@ export const Cabecalho = styled.div`
     justify-content: center;
     height: 10rem;    
 
-    background: ${corBanner};  
+    background: ${corPrimaria};  
         
 `
 export const Banner = styled.h1`

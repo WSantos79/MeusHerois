@@ -4,10 +4,14 @@ import appConfig from "../../config.json"
 import styled from "styled-components";
 
 const Lista = styled.div`
+    position: relative;
+    margin: auto;
+   
+
+
     border: 1px outset #000000;
-    margin-left: 5px;
-    margin-bottom: 10px;
-    width: 100%;
+    margin-bottom: 5rem;
+    width: 80%;
 `
 const H1 = styled.h1`
     padding: 0;
@@ -18,19 +22,17 @@ const H1 = styled.h1`
 const CaixaCard = styled.div`
     border: 1px outset #000000;
     margin: 7px;
-    position: relative;
-    display: block;
     transition: transform 500ms;
-    flex: 1 1 0px;   
-    &:hover{
-        transform: translateX(-25%);
-    }
     &:hover ~ &, &:focus ~ &{
         transform: translateX(25%);      
     }    
 `
 const Div = styled.div`
     display: flex;
+   // overflow-x: scroll;
+   // overflow-y: hidden;
+   // white-space: wrap;
+
     & ${CaixaCard}:hover, &:focus ${CaixaCard} {
         transform: scale(1.5) ;
         z-index: 1;
