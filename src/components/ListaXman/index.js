@@ -10,24 +10,36 @@ const Area = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 5rem;
+
+    --opa: 0;
+
+    &:hover {
+        --opa: 1;
+    }
 `
 
 const Lista = styled.div`
     position: relative;
    // margin: auto;
-    overflow: hidden;
-
+    overflow-X: hidden;
+    overflow-Y: scroll;  
+    
     border: 1px outset #000000;
     width: 80%;
+    padding-bottom: 70px;
+    padding-top: 25px;   
+   
 `
 const H1 = styled.h1`
     padding: 0;
     margin: 0;
     margin-left: 2.5rem;
 `
-const BtnLeft = styled.button`
+const Btn = styled.button`
     width: 30px;
     height: 2rem;
+    opacity: var(--opa);
+    transition: all ease 0.5s;
 `
 const BtnRight = styled.button`
     width: 30px;
@@ -38,6 +50,7 @@ const CaixaCard = styled.div`
     border: 1px outset #000000;
     margin: 7px;
     transition: transform 500ms;
+    
     &:hover ~ &, &:focus ~ &{
         transform: translateX(25%);   
     }
@@ -45,7 +58,9 @@ const CaixaCard = styled.div`
 `
 const Div = styled.div`    
     display: flex;
-   
+    transition: all ease 0.5s;
+
+     
     & ${CaixaCard}:hover, &:focus ${CaixaCard} {
         transform: scale(1.5) ;
         z-index: 1;
@@ -58,34 +73,36 @@ const Div = styled.div`
 
 const CardSecundario = styled.figure`
     margin: 10px;
-    padding: 0;
+    padding: 0;    
     
 `
 const Figcaption = styled.figcaption`
     text-align: center;
-`
+
+    `
 
 export default () => {
     const XmanNumeros = [];
     const [isLoading, setIsLoading] = useState(false);
     const firstUpdate = useRef(true);
-    const [scroll, setScroll] = useState(0);
-
-    function handleRight() {
-        let x = scroll - Math.round(window.innerWidth / 2);
-        let listW = appConfig.xman.length * 150;
-        if (window.innerWidth - listW > x) {
-            x = (window.innerWidth - listW) - 60;
+    const [scroll, setScroll] = useState(-510);
+    
+    function handleLeft() {
+        let pixel = scroll + Math.round(window.innerWidth / 2);
+        if(pixel > 0){
+            pixel = 0;
         }
-        setScroll(x);
+        setScroll(pixel);
     }
 
-    function handleLeft() {
-        let x = scroll + Math.round(window.innerWidth / 2);
-        if(x > 0){
-            x = 0;
+    function handleRight() {
+        let pixel = scroll - Math.round(window.innerWidth / 2);
+        let listaLargura = appConfig.xman.length * 235;
+
+        if((window.innerWidth - listaLargura) > pixel) {
+            pixel = (window.innerWidth - listaLargura);
         }
-        setScroll(x);
+        setScroll(pixel);
     }
 
     useEffect(() => {
@@ -106,14 +123,14 @@ export default () => {
     return (
         <>            
             <Area>
-                <BtnLeft onClick={() => {
+                <Btn onClick={() => {
                     handleLeft();
                 }}/>
                 <Lista>
                     <H1>X-Men</H1>
                     <Div style={{
                     marginLeft: scroll,
-                    width: appConfig.xman.length * 150
+                    width: appConfig.xman.length * 235 // qnt de item x a largura deles
                 }}>
                        
                         {appConfig.xman.map(heroi => {
@@ -129,7 +146,7 @@ export default () => {
                         })}
                     </Div>
                 </Lista>
-                <BtnRight onClick={() => {
+                <Btn onClick={() => {
                     handleRight();
                 }} />
             </Area>
@@ -137,34 +154,3 @@ export default () => {
         </>
     );
 };
-
-
-/*
-]
- {Xman.forEach(function (objeto) {
-                        console.log(objeto.name, objeto.img)
-                    })}
-
-
-
-
-                    <>
-                        <p>{value.name}</p>
-                        <p>pau no CUUUUUUUUUUUU</p>
-                        <figure>
-                            <img src={value.img} alt="Imagem de um integrante Xman"></img>
-                            <figcaption>{value.name}{key}</figcaption>
-                        </figure>
-                        {console.log('Xman? ???')}
-                        {   /* console.log(Xman)  }
-                        {console.log(value.img)}
-                    </>
-
-
-
-
-
-
-
-
-*/

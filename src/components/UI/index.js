@@ -67,12 +67,12 @@ grid-area: Primeiro;
 `;
 export const ContainerDois = styled.div`
 grid-area: Segundo;
-// background-color: purple;
+//background-color: purple;
 justify-self: stretch;
 align-self: start; 
 display: flex;
-word-wrap: break-word; 
-width: 70%;
+//word-wrap: break-word; 
+width: 95%;
 
 `;
 export const ContainerTres = styled.div`
