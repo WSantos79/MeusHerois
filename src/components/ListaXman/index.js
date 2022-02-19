@@ -2,73 +2,76 @@ import React, { useEffect, useState, useRef } from "react";
 import { listaHeroi } from "../../api/api";
 import appConfig from "../../config.json"
 import styled from "styled-components";
-
+import {corSecundaria, corPrimaria, corTexto, corTextoHover} from "../UI/variaveis"
 
 const Area = styled.div`
     display:flex;
-    padding: 0;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
-
     --opa: 0;
-
+    
     &:hover {
         --opa: 1;
-    }
+    }   
 `
 
 const Lista = styled.div`
-    position: relative;
-   // margin: auto;
-    overflow-X: hidden;
-    overflow-Y: scroll;  
+    position: relative;   
+    overflow: hidden;
+   // background: ${corSecundaria};    
     
-    border: 1px outset #000000;
-    width: 80%;
-    padding-bottom: 70px;
-    padding-top: 25px;   
-   
+    width: 80%;  
+    
 `
 const H1 = styled.h1`
     padding: 0;
     margin: 0;
     margin-left: 2.5rem;
 `
-const Btn = styled.button`
-    width: 30px;
-    height: 2rem;
+const Btn = styled.p`   
     opacity: var(--opa);
     transition: all ease 0.5s;
+    
+    margin: 0 10px;
+    box-shadow: none;
+    font-family: Arial;
+    color: ${corTexto};
+    font-size: 60px;
+    background: ${corPrimaria};
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    
+    &:hover {
+    color: ${corTextoHover};
+    }
 `
-const BtnRight = styled.button`
-    width: 30px;
-    height: 2rem;
-`
-
 const CaixaCard = styled.div`
-    border: 1px outset #000000;
-    margin: 7px;
+   // border: 1px outset #000000; 
+
+    margin: 0 0 30px 0;
     transition: transform 500ms;
     
     &:hover ~ &, &:focus ~ &{
-        transform: translateX(25%);   
+        transform: translateX(10%);   
     }
     
 `
 const Div = styled.div`    
     display: flex;
-    transition: all ease 0.5s;
+    transition: all ease 0.5s;    
 
-     
     & ${CaixaCard}:hover, &:focus ${CaixaCard} {
-        transform: scale(1.5) ;
+        transform: scale(1.3) ;        
         z-index: 1;
         cursor: pointer;
     }
     &:hover > * , &:focus-within > *  {
-        transform: translateX(-25%);        
-    }   
+        transform: translateX(-10%);        
+    }
+    & > div:first-child {
+        margin-left: 1.3rem;
+    }
 `;
 
 const CardSecundario = styled.figure`
@@ -76,16 +79,20 @@ const CardSecundario = styled.figure`
     padding: 0;    
     
 `
+const IMG = styled.img`
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+`
 const Figcaption = styled.figcaption`
     text-align: center;
-
     `
 
 export default () => {
     const XmanNumeros = [];
     const [isLoading, setIsLoading] = useState(false);
     const firstUpdate = useRef(true);
-    const [scroll, setScroll] = useState(-510);
+    const [scroll, setScroll] = useState(0);
     
     function handleLeft() {
         let pixel = scroll + Math.round(window.innerWidth / 2);
@@ -97,7 +104,7 @@ export default () => {
 
     function handleRight() {
         let pixel = scroll - Math.round(window.innerWidth / 2);
-        let listaLargura = appConfig.xman.length * 235;
+        let listaLargura = appConfig.xman.length * 200;
 
         if((window.innerWidth - listaLargura) > pixel) {
             pixel = (window.innerWidth - listaLargura);
@@ -123,21 +130,23 @@ export default () => {
     return (
         <>            
             <Area>
+            {console.log(appConfig.xman)}
                 <Btn onClick={() => {
                     handleLeft();
-                }}/>
+                }}>&#10094;</Btn>
                 <Lista>
                     <H1>X-Men</H1>
                     <Div style={{
                     marginLeft: scroll,
-                    width: appConfig.xman.length * 235 // qnt de item x a largura deles
+                    width: appConfig.xman.length * 214,  // qnt de item x a largura deles
+
                 }}>
                        
                         {appConfig.xman.map(heroi => {
                             return (
                                 <CaixaCard>
                                     <CardSecundario key={heroi.name}>
-                                        <img src={heroi.img} alt="Imagem de um integrante Xman"></img>
+                                        <IMG src={heroi.img} alt="Imagem de um integrante Xman"></IMG>
                                         <Figcaption>{heroi.name}</Figcaption>
                                     </CardSecundario>
                                 </CaixaCard>
@@ -148,7 +157,7 @@ export default () => {
                 </Lista>
                 <Btn onClick={() => {
                     handleRight();
-                }} />
+                }}>&#10095;</Btn>
             </Area>
 
         </>

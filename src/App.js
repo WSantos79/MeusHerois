@@ -13,6 +13,7 @@ function App() {
         <Cabecalho/>
         <MeuHeroi/>
         <ListaXman/>
+        <ListaXman/>
       </BrowserRouter>
     </>
   );

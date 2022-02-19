@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import {corFundo} from "./UI/variaveis"
+import {corPrimaria, corTexto} from "./UI/variaveis"
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -14,7 +14,8 @@ body {
 
 	background-blend-mode: saturation;   
 	background-size: auto 40rem;
-	background: ${corFundo};
+	background: ${corPrimaria};
+	color: ${corTexto};
 }
 
 `

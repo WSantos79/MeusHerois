@@ -9,9 +9,20 @@
       { "name": "Gambit", "id": "274", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/274-gambit.jpg" },
       { "name": "Cyclops", "id": "196", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/196-cyclops.jpg" },
       { "name": "Nightcrawler", "id": "490", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/490-nightcrawler.jpg" },
-      { "name": "Storm", "id": "638", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/638-storm.jpg" }  
-     
-    ],    
+      { "name": "Storm", "id": "638", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/638-storm.jpg" },
+      { "name": "Professor X", "id": "527", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/527-professor-x.jpg" },
+      { "name": "Rogue", "id": "567", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/567-rogue.jpg" },
+      { "name": "Beast", "id": "75", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/75-beast.jpg" },
+      { "name": "Sunspot", "id": "640", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/640-sunspot.jpg" },
+      { "name": "Wolfsbane", "id": "716", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/716-wolfsbane.jpg" },
+      { "name": "Colossus", "id": "185", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/185-colossus.jpg" },
+      { "name": "Cannonball", "id": "148", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/148-cannonball.jpg" },
+      { "name": "Juggernaut", "id": "374", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/374-juggernaut.jpg" },
+      { "name": "Deadpool", "id": "213", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/213-deadpool.jpg" },
+      { "name": "Sabretooth", "id": "570", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/570-sabretooth.jpg" },
+      { "name": "Emma Frost", "id": "241", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/241-emma-frost.jpg" },
+      { "name": "Apocalypse", "id": "35", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/35-apocalypse.jpg" }      
+    ],
     "idExistente": [
       1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 17, 18, 20, 23, 24, 25, 26,
       28, 29, 30, 31, 32, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 48, 49,

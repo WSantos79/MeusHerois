@@ -1,14 +1,14 @@
 import styled from "styled-components";
-import { corBanner, corPrimaria } from "../UI/variaveis"
+import { corBanner } from "../UI/variaveis"
 
 
 /* Cabeçalho */
 export const Cabecalho = styled.div`
     display:flex;
     justify-content: center;
-    height: 10rem;    
-
-    background: ${corPrimaria};  
+    height: 9rem;    
+    overflow: hidden;
+    background: ${corBanner};  
         
 `
 export const Banner = styled.h1`
@@ -18,10 +18,10 @@ export const Banner = styled.h1`
     align-self: center;
   //  line-height: 10rem;
 
-    font-size: 130px;
+    font-size: 120px;
     font-family: 'Shizuru', cursive;
     font-weight: 1000;
-
+    
     //background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstaticmobly.akamaized.net%2Fp%2FRM-Adesivos-Adesivo-de-Parede---Azulejos-super-herC3B3is-443-6311-581112-1-product.jpg&f=1&nofb=1');
     background-image:	url('fundo-banner.jpg');
     -webkit-background-clip: text;
@@ -33,7 +33,7 @@ export const Div = styled.div`
 display: flex;
 justify-content: space-between;
 width: 60.6rem; // 58.6rem;
-margin: 2rem auto;
+margin: 2rem auto 0.5rem auto;
 // background: gray;
 `;
 
