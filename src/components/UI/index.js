@@ -1,169 +1,86 @@
 import styled from "styled-components";
-import { corBanner } from "../UI/variaveis"
+import { corSecundaria, corPrimaria, corTexto, corTextoHover } from "../UI/variaveis"
 
-
-/* Cabeçalho */
-export const Cabecalho = styled.div`
+export const Area = styled.div`
     display:flex;
     justify-content: center;
-    height: 9rem;    
-    overflow: hidden;
-    background: ${corBanner};  
-        
-`
-export const Banner = styled.h1`
-    @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');   
-   
-   
-    align-self: center;
-  //  line-height: 10rem;
-
-    font-size: 120px;
-    font-family: 'Shizuru', cursive;
-    font-weight: 1000;
+    align-items: center;
+    --opa: 0;
     
-    //background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstaticmobly.akamaized.net%2Fp%2FRM-Adesivos-Adesivo-de-Parede---Azulejos-super-herC3B3is-443-6311-581112-1-product.jpg&f=1&nofb=1');
-    background-image:	url('fundo-banner.jpg');
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    &:hover {
+        --opa: 1;
+    }   
 `
-/* Meu heroi */
 
-export const Div = styled.div`
-display: flex;
-justify-content: space-between;
-width: 60.6rem; // 58.6rem;
-margin: 2rem auto 0.5rem auto;
-// background: gray;
-`;
-
-export const DivTwo = styled.div`
-// justify-content: flex-start;
-// align-items: flex-start;
-// align-content: flex-start;
-width: 66%;
-//  background-color: #2f1d58;
-`;
-
-export const Container = styled.div`
-width: 100%;
-//  background-color: green;
-display: grid;
-grid-template-columns: 0.5fr 0.5fr 2fr;
-grid-template-rows: 0.7fr 2.5fr 1fr;
-gap: 0px 0px;
-grid-template-areas:    
-"Primeiro Primeiro ."
-"Segundo Terceiro ."
-"Segundo Terceiro .";
-`;
-export const ContainerUm = styled.div`
-width: 89%;
-// margin-left: 70px;
-text-align: center;
-grid-area: Primeiro;
-//justify-self: center;
-// background-color: blue;
-`;
-export const ContainerDois = styled.div`
-grid-area: Segundo;
-//background-color: purple;
-justify-self: stretch;
-align-self: start; 
-display: flex;
-//word-wrap: break-word; 
-width: 95%;
-
-`;
-export const ContainerTres = styled.div`
-grid-area: Terceiro;
-//background-color: white;
-justify-self: start;
-align-self: start;
-display: flex;
-word-wrap: break-word;
-width: 78%;
-
-`;
-
-export const Titulo = styled.span`
-justify-self: center;
-margin-top: 0;
-padding-top: 0;
-margin-left: 2rem;
-font-weight: 700;
-font-size: 1.9rem;
-`;
-
-export const Estatistica = styled.ul`
-display: inline-block;
-width: 350px;
-margin: 4px;
-// background-color: lightblue;
-padding-left: 2px;
-padding-top: 5px;
-`;
-export const Item = styled.li`
-margin-bottom: 3px;
-display: block;
-// font-weight: 600;
-`;
-
-export const SubTitulo = styled.span`
-font-weight: 600;
-`;
-
-export const Card = styled.div`
-    margin-right: 10px;
-    margin-top: auto;
-    position: relative;
-    width: 300px;
-
-    &:before {
-      position: absolute;
-      content: "";
-      left: -10px;
-
-      width: 2px;
-      height: 100%;
-      top: 10px;
-      background: red;
+export const Lista = styled.div`
+    position: relative;   
+    overflow: hidden;
+   // background: ${corSecundaria};    
+    
+    width: 80%;  
+    
+`
+export const H1 = styled.h1`
+    padding: 0;
+    margin: 0;
+    margin-left: 2.5rem;
+`
+export const Btn = styled.p`   
+    opacity: var(--opa);
+    transition: all ease 0.5s;
+    
+    margin: 0 10px;
+    box-shadow: none;
+    font-family: Arial;
+    color: ${corTexto};
+    font-size: 60px;
+    background: ${corPrimaria};
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    
+    &:hover {
+    color: ${corTextoHover};
     }
-    &:after {
-      position: absolute;
-      content: "";
-      left: -10px;
+`
+export const CaixaCard = styled.div`
+   // border: 1px outset #000000; 
 
-      width: 100%;
-      height: 2px;
-      bottom: -10px;
-      background: red;
+    margin: 0 0 30px 0;
+    transition: transform 500ms;
+    
+    &:hover ~ &, &:focus ~ &{
+        transform: translateX(10%);   
     }
-  `;
-export const CardImagem = styled.div`
-    &:before {
-      position: absolute;
-      content: "";
-      background: red;
+    
+`
+export const Div = styled.div`    
+    display: flex;
+    transition: all ease 0.5s;    
 
-      width: 2px;
-      height: 100%;
-      right: -10px;
-      left: inherit;
-      top: -10px;
+    & ${CaixaCard}:hover, &:focus ${CaixaCard} {
+        transform: scale(1.3) ;        
+        z-index: 1;
+        cursor: pointer;
     }
-
-    &:after {
-      position: absolute;
-      content: "";
-      background: red;
-
-      width: 100%;
-      height: 2px;
-      top: -10px;
-      left: 10px;
+    &:hover > * , &:focus-within > *  {
+        transform: translateX(-10%);        
     }
-  `;
-export const Img = styled.img`
-    height: 450px;
-  `;
+    & > div:first-child {
+        margin-left: 1.3rem;
+    }
+`;
+
+export const CardSecundario = styled.figure`
+    margin: 10px;
+    padding: 0;    
+    
+`
+export const IMG = styled.img`
+    border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+`
+export const Figcaption = styled.figcaption`
+    text-align: center;
+`

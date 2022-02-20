@@ -1,68 +1,67 @@
-import React, { useEffect, useState, useRef } from "react";
-import { busca, meuHeroi } from "../../api/api";
-import styled from "styled-components";
-import { Div, DivTwo, Container, ContainerUm, ContainerDois, ContainerTres, Titulo, SubTitulo, Estatistica, Item, Card, CardImagem, Img } from "../UI";
-import appConfig from "../../config.json"
+import React, { useEffect, useState, useRef, useContext } from "react";
+import { busca } from "../../api/api";
+import {
+  Div,  DivTwo,  Container,  ContainerUm,  ContainerDois,  ContainerTres,  Titulo,  SubTitulo,  Estatistica,  Item,  Card,  CardImagem,
+  Img,  Loading,  Input} from "./styles";
+import appConfig from "../../config.json";
+import { SeeHeroContext } from "../../commom/context/SeeHero";
 
 export default () => {
-  
-  const [heroi, setHeroi] = useState({});
-  const [digitado, setDigitado] = useState('');
-  const [novoNumero, setNovoNumero] = useState(0)
+ // const [heroi, setHeroi] = useState({});
+  const [digitado, setDigitado] = useState("");
   const firstUpdate = useRef(true);
+  const {heroi, setHeroi, setId} = useContext(SeeHeroContext)
 
   useEffect(() => {
     const n = Math.floor(Math.random() * 562);
-    const id = appConfig.idExistente[n];
+   // const id = appConfig.idExistente[n];
+   setId(appConfig.idExistente[n]);
     // batman 70
     // nomeGrande 636
     // grande aliase 584
     // grande 75
     // wolverine 717
-    meuHeroi(setHeroi, id);
+    //meuHeroi(setHeroi, id);
   }, []);
-  //useEffect(() => {    
-  //  meuHeroi(setHeroi, novoNumero);
-  //}, [novoNumero]);
- // function buscar() {
- //   busca(digitado, setHeroi);
- ////  busca(digitado, setNovoNumero)
- // }
-
-  useEffect(() => {    
+ 
+  useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
-      //busca(digitado);  
-     // console.log('fui executado aqui')
+      //busca(digitado);
+      // console.log('fui executado aqui')
     }
-  //  console.log('to aqui')
+    //  console.log('to aqui')
     busca(digitado, setHeroi);
-  //  console.log(count);  
-  }, [digitado]);   
+    //  console.log(count);
+  }, [digitado]);
 
-  const Input = styled.input`
-    display: flex;
-    margin: 1rem auto;
-    width: 40rem;
-    height: 2rem;
-  `;
-    
+  
+
   return (
     <>
+      {!heroi.id &&
+        <Loading>
+          Loading
+          <span />
+        </Loading>
+      }
       {heroi.id && (
         <>
-          <Input onKeyPress={(e) => {
-           if(e.key === "Enter"){
-              e.preventDefault();                          
-              console.log('apertei')
-              setDigitado(e.target.value);
+          <Input
+            onKeyPress={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                console.log("apertei");
+                setDigitado(e.target.value);
 
-              console.log(e.target.value);
-              //console.log(novoNumero)
-            //  buscar();
-            }
-          }} type="search" placeholder="Busque seu Herói"></Input>
-          {  console.log(novoNumero)  }
+                console.log(e.target.value);
+                
+                //  buscar();
+              }
+            }}
+            type="search"
+            placeholder="Busque seu Herói"
+          ></Input>          
           <Div>
             <DivTwo>
               <Container>
