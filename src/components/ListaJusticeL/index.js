@@ -2,8 +2,9 @@ import React, { useState, useContext } from "react";
 import appConfig from "../../config.json"
 import { SeeHeroContext } from "../../commom/context/SeeHero";
 import { Area, Btn, Lista, H1, Div, CaixaCard, CardSecundario, IMG, Figcaption } from "../UI";
+import { scrollToTop } from "../ScrollTop";
 
-export default () => {   
+export default () => {
     const { setId } = useContext(SeeHeroContext)
     const [scroll, setScroll] = useState(0);
 
@@ -27,7 +28,7 @@ export default () => {
 
     return (
         <>
-            <Area>                
+            <Area>
                 <Btn onClick={() => {
                     handleLeft();
                 }}>&#10094;</Btn>
@@ -41,10 +42,12 @@ export default () => {
 
                         {appConfig.JusticeLeague.map(heroi => {
                             return (
-                                <CaixaCard onClick={() =>                                                           
+                                <CaixaCard key={heroi.name} onClick={() => {
                                     setId(heroi.id)
+                                    scrollToTop()
+                                }
                                 }>
-                                    <CardSecundario key={heroi.name}>
+                                    <CardSecundario>
                                         <IMG src={heroi.img} alt="Imagem de um integrante da Liga da Justiça"></IMG>
                                         <Figcaption>{heroi.name}</Figcaption>
                                     </CardSecundario>

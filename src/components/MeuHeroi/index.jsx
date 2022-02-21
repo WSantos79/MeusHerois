@@ -1,21 +1,36 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { busca } from "../../api/api";
 import {
-  Div,  DivTwo,  Container,  ContainerUm,  ContainerDois,  ContainerTres,  Titulo,  SubTitulo,  Estatistica,  Item,  Card,  CardImagem,
-  Img,  Loading,  Input} from "./styles";
+  Div,
+  DivTwo,
+  Container,
+  ContainerUm,
+  ContainerDois,
+  ContainerTres,
+  Titulo,
+  SubTitulo,
+  Estatistica,
+  Item,
+  Card,
+  CardImagem,
+  Img,
+  Loading,
+  Input,
+  Alert,
+} from "./styles";
 import appConfig from "../../config.json";
 import { SeeHeroContext } from "../../commom/context/SeeHero";
 
 export default () => {
- // const [heroi, setHeroi] = useState({});
+  // const [heroi, setHeroi] = useState({});
   const [digitado, setDigitado] = useState("");
   const firstUpdate = useRef(true);
-  const {heroi, setHeroi, setId} = useContext(SeeHeroContext)
+  const { heroi, setHeroi, setId } = useContext(SeeHeroContext);
 
   useEffect(() => {
     const n = Math.floor(Math.random() * 562);
-   // const id = appConfig.idExistente[n];
-   setId(appConfig.idExistente[n]);
+    // const id = appConfig.idExistente[n];
+    setId(appConfig.idExistente[n]);
     // batman 70
     // nomeGrande 636
     // grande aliase 584
@@ -23,45 +38,48 @@ export default () => {
     // wolverine 717
     //meuHeroi(setHeroi, id);
   }, []);
- 
+
   useEffect(() => {
     if (firstUpdate.current) {
       firstUpdate.current = false;
       //busca(digitado);
       // console.log('fui executado aqui')
+    } else {
+      busca(digitado, setHeroi, heroi.id);
     }
     //  console.log('to aqui')
-    busca(digitado, setHeroi);
     //  console.log(count);
   }, [digitado]);
 
-  
-
   return (
     <>
-      {!heroi.id &&
+      <Input
+        onKeyPress={(e) => {
+          if (e.key === "Enter") {
+            e.preventDefault();
+            setDigitado(e.target.value);
+          }
+        }}
+        type="search"
+        placeholder="Busque seu Herói"
+      ></Input>
+
+      {appConfig.isShow && (
+        <Alert>
+          Herói não encontrado. Escreva em inglês e tente com hífen ex:
+          Spider-Man
+        </Alert>
+      )}
+
+      {!heroi.id && (
         <Loading>
           Loading
           <span />
         </Loading>
-      }
+      )}
+
       {heroi.id && (
         <>
-          <Input
-            onKeyPress={(e) => {
-              if (e.key === "Enter") {
-                e.preventDefault();
-                console.log("apertei");
-                setDigitado(e.target.value);
-
-                console.log(e.target.value);
-                
-                //  buscar();
-              }
-            }}
-            type="search"
-            placeholder="Busque seu Herói"
-          ></Input>          
           <Div>
             <DivTwo>
               <Container>
@@ -150,64 +168,3 @@ export default () => {
     </>
   );
 };
-
-/*
-<Item><SubTitulo>Parentes:</SubTitulo> {heroi.connections.relatives}</Item>              
-
-
-  <div>
-            <img src={heroi.images.md}></img>
-            <p>{heroi.name}</p>
-          </div>
-
-{heroi.map((heroi) => {
-        return (
-          <></>
-          // console.log(dado.name)
-        );
-      })}
-
-
-
-
-
-
-{dado.map((dado) => {
-        return (
-          <>
-            <img src={dado.images.lg}></img>
-            <p>{dado.name}</p>
-          
-          
-          </>
-         // console.log(dado.name)
-        )
-      })}
-
-
-
-
-{console.log(dado.name.includes('Adam'), dado.name)}
- TENTAR USAR TERNARIO PARA BUSCA
-color: ${(props) => props.primary ? corPrimaria : "white"}
-
-
-
-
-
-
-
-{dado.map((dado) => {
-        return (
-          <>
-            <div key={dado.id}>
-              <img src={dado.thumbnail.path + ".jpg"}></img>
-              <p>{dado.name}</p>
-              
-              {console.log(dado)}
-            </div>
-          </>
-        );
-      })}
-
-*/

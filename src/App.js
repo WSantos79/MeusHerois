@@ -7,6 +7,7 @@ import MeuHeroi from './components/MeuHeroi';
 import { SeeHeroProvider } from './commom/context/SeeHero';
 import ListaJusticeL from './components/ListaJusticeL';
 import ListaAvengers from './components/ListaAvengers';
+import Rodape from './components/Rodape';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <ListaJusticeL />
           <ListaAvengers />
         </SeeHeroProvider>
+        <Rodape />
       </BrowserRouter>
     </>
   );

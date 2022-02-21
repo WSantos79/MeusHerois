@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { corBanner } from "../UI/variaveis";
 
+
 export const Div = styled.div`
 display: flex;
 justify-content: space-between;
 width: 60.6rem; // 58.6rem;
-margin: 2rem auto 0.5rem auto;
+margin: 3rem auto 0.5rem auto;
 // background: gray;
 `;
 
@@ -142,10 +143,24 @@ export const Img = styled.img`
 
 export const Input = styled.input`
   display: flex;
-  margin: 1rem auto;
+  margin: 1rem auto 0 auto;
   width: 40rem;
   height: 2rem;
+  
+  &:focus {
+    border-color: ${corBanner};
+    outline: 1px solid ${corBanner};
+  }
 `;
+
+export const Alert = styled.span`  
+  position: absolute;
+  margin: 0.2rem;
+  padding: 0;
+  left: 50%;
+  transform: translate(-50%, 0);  
+  color: red; 
+`
 
 export const Loading = styled.div`
   position: relative;
@@ -225,3 +240,4 @@ export const Loading = styled.div`
     }
   }
 `;
+

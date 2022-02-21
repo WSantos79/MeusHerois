@@ -68,7 +68,7 @@ export const Div = styled.div`
     }
     & > div:first-child {
         margin-left: 1.3rem;
-    }
+    }   
 `;
 
 export const CardSecundario = styled.figure`

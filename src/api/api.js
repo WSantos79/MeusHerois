@@ -59,20 +59,31 @@ const T = K;
 }(s, 0xb7c13));
 export const api = axios[m('\x30\x78\x38\x31')]({ '\x62\x61\x73\x65\x55\x52\x4c': m(0x87) });
 
-export const busca = async(digitado, setDado) => {
-    const resposta = await api.get(`all.json`)   
-    resposta.data.forEach(pers  => {
-        if(pers.name.toLowerCase() === digitado.toLowerCase()){
-            //setDado(pers.id)
-            meuHeroi(setDado, pers.id);
+
+
+export const busca = async (digitado, setDado, id) => {
+    const resposta = await api.get(`all.json`)
+    let q = false;
+    resposta.data.every((pers) => {
+        if (pers.name.toLowerCase() === digitado.toLowerCase()){
+            meuHeroi(setDado, pers.id)
+            console.log('achei')
+            appConfig.isShow = false;
+            q = false;
+            return false;
         }else{
-            return console.log('nao encontrado')
-        }        
-    })
-    
+            console.log('nao achei')             
+            q = true;         
+            return true;
+        }
+    } )
+    if(q){
+        appConfig.isShow = true;
+        meuHeroi(setDado, id)
+    }
 }
 
-export const meuHeroi = async(setDado, n) => {
+export const meuHeroi = async (setDado, n) => {
     const resposta = await api.get(`id/${n}.json`)
     setDado(resposta.data)
 }
