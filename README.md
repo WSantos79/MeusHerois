@@ -12,7 +12,7 @@
  <a href="#smiley-autor">Autor</a>
 </p>
 
-<img src="https://github.com/WSantos79/MeusHerois/blob/master/public/screen.png?raw=true"><br><br>
+<img src="https://github.com/WSantos79/MeusHerois/blob/master/public/screen.png"><br><br>
 
 ## :heavy_check_mark: **Descrição**
 
@@ -21,10 +21,10 @@ Projeto em desenvolvimento...
 ## :hammer: **Tecnologias**
 
 <ul type="none">
+<li>:small_blue_diamond: React JS</li>
+<li>:small_blue_diamond: JavaScript</li>
 <li>:small_blue_diamond: HTML</li>
 <li>:small_blue_diamond: CSS</li>
-<li>:small_blue_diamond: JavaScript</li>
-<li>:small_blue_diamond: React JS</li>
 </ul>
 
 ## :game_die: Rodando localmente
