@@ -12,7 +12,7 @@
  <a href="#smiley-autor">Autor</a>
 </p>
 
-<img src="screen.png"><br><br>
+<img src="https://github.com/WSantos79/MeusHerois/blob/master/public/screen.png?raw=true"><br><br>
 
 ## :heavy_check_mark: **Descrição**
 
