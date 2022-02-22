@@ -79,11 +79,12 @@ export const busca = async (digitado, setDado, id) => {
     } )
     if(q){
         appConfig.isShow = true;
-        meuHeroi(setDado, id)
+        meuHeroi(setDado, id);
     }
 }
 
 export const meuHeroi = async (setDado, n) => {
     const resposta = await api.get(`id/${n}.json`)
-    setDado(resposta.data)
+    setDado(resposta.data);
+    appConfig.isShow = false;
 }
