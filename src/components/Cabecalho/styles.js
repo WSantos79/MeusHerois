@@ -7,7 +7,11 @@ export const Cabecalho = styled.div`
     justify-content: center;
     height: 9rem;    
     overflow: hidden;
-    background: ${corBanner};  
+    background: ${corBanner};
+
+    @media (max-width: 480px) {        
+        height: 6rem;
+      }
         
 `
 export const Banner = styled.h1`
@@ -15,14 +19,16 @@ export const Banner = styled.h1`
    
    
     align-self: center;
-  //  line-height: 10rem;
 
     font-size: 120px;
     font-family: 'Shizuru', cursive;
-    font-weight: 1000;
+    font-weight: 100px;    
     
-    //background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstaticmobly.akamaized.net%2Fp%2FRM-Adesivos-Adesivo-de-Parede---Azulejos-super-herC3B3is-443-6311-581112-1-product.jpg&f=1&nofb=1');
     background-image:	url('fundo-banner.jpg');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @media (max-width: 480px) {        
+        font-size: 60px;
+      }
 `

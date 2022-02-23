@@ -9,15 +9,15 @@ export const Area = styled.div`
     
     &:hover {
         --opa: 1;
-    }   
+    }
 `
 
 export const Lista = styled.div`
     position: relative;   
     overflow: hidden;
-   // background: ${corSecundaria};    
+   // background: ${corSecundaria}; 
     
-    width: 80%;  
+    width: 80%;   
     
 `
 export const H1 = styled.h1`

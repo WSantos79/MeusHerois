@@ -1,13 +1,18 @@
 import styled from "styled-components";
 import { corBanner } from "../UI/variaveis";
-
+import px2vw from '../../utils/px2vw'
 
 export const Div = styled.div`
 display: flex;
 justify-content: space-between;
 width: 60.6rem; // 58.6rem;
 margin: 3rem auto 0.5rem auto;
-// background: gray;
+
+@media (max-width: 480px) {        
+  flex-direction: column-reverse;
+  margin-top: 4rem;
+  
+}
 `;
 
 export const DivTwo = styled.div`
@@ -151,6 +156,10 @@ export const Input = styled.input`
     border-color: ${corBanner};
     outline: 1px solid ${corBanner};
   }
+
+  @media (max-width: 480px) {        
+    width: 20rem;
+  }
 `;
 
 export const Alert = styled.span`  
@@ -159,7 +168,11 @@ export const Alert = styled.span`
   padding: 0;
   left: 50%;
   transform: translate(-50%, 0);  
-  color: red; 
+  color: red;
+
+  @media (max-width: 480px) {        
+    width: 20rem;
+  }
 `
 
 export const Loading = styled.div`

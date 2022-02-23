@@ -9,7 +9,7 @@ align-items: center;
 height: 5rem;
 background: ${corBanner};
 margin-top: 1.5rem;
-font-size: 1em; 
+font-size: 1.2em; 
 font-weight: 500;
 `
 export const Span = styled.span`
