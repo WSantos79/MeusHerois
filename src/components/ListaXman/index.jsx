@@ -51,7 +51,7 @@ export default () => {
           <Div
             style={{
               marginLeft: scroll,
-              width: appConfig.xman.length * 214, // qnt de item x a largura deles
+              width: appConfig.xman.length * 197, // qnt de item x a largura deles
             }}
           >
             {appConfig.xman.map((heroi) => {

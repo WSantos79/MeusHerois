@@ -1,5 +1,5 @@
 import React from "react";
-import { Rodape, P, Link, Social, Span } from "./styles";
+import { Rodape, Link, Social, Span } from "./styles";
 import GitHub from "../../assets/images/github.svg"
 import Linkedin from "../../assets/images/linkedinDark.svg"
 import Email from "../../assets/images/gmailDark.svg"

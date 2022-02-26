@@ -10,8 +10,8 @@ export const Cabecalho = styled.div`
     background: ${corBanner};
 
     @media (max-width: 480px) {        
-        height: 6rem;
-      }
+      height: 6rem;     
+    }
         
 `
 export const Banner = styled.h1`

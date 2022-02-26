@@ -18,7 +18,7 @@ export default () => {
 
     function handleRight() {
         let pixel = scroll - Math.round(window.innerWidth / 2);
-        let listaLargura = appConfig.JusticeLeague.length * 198;
+        let listaLargura = appConfig.JusticeLeague.length * 197; //198
 
         if ((window.innerWidth - listaLargura) > pixel) {
             pixel = (window.innerWidth - listaLargura);
@@ -36,7 +36,7 @@ export default () => {
                     <H1>Justice League</H1>
                     <Div style={{
                         marginLeft: scroll,
-                        width: appConfig.JusticeLeague.length * 198,  // qnt de item x a largura deles
+                        width: appConfig.JusticeLeague.length * 197,  // qnt de item x a largura deles
 
                     }}>
 

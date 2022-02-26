@@ -4,6 +4,7 @@ import { SeeHeroContext } from "../../commom/context/SeeHero";
 import { Area, Btn, Lista, H1, Div, CaixaCard, CardSecundario, IMG, Figcaption } from "../UI";
 import { scrollToTop } from "../ScrollTop";
 
+
 export default () => {
   const { setId } = useContext(SeeHeroContext);
   const [scroll, setScroll] = useState(0);
@@ -18,7 +19,7 @@ export default () => {
 
   function handleRight() {
     let pixel = scroll - Math.round(window.innerWidth / 2);
-    let listaLargura = appConfig.avengers.length * 203;
+    let listaLargura = appConfig.avengers.length * 197; // 205
 
     if (window.innerWidth - listaLargura > pixel) {
       pixel = window.innerWidth - listaLargura;
@@ -41,7 +42,7 @@ export default () => {
           <Div
             style={{
               marginLeft: scroll,
-              width: appConfig.avengers.length * 203, // qnt de item x a largura deles
+              width: appConfig.avengers.length * 197, // qnt de item x a largura deles
             }}
           >
             {appConfig.avengers.map((heroi) => {

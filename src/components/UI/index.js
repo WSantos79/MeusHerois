@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { corSecundaria, corPrimaria, corTexto, corTextoHover } from "../UI/variaveis"
 
+
 export const Area = styled.div`
     display:flex;
     justify-content: center;
@@ -15,7 +16,7 @@ export const Area = styled.div`
 export const Lista = styled.div`
     position: relative;   
     overflow: hidden;
-   // background: ${corSecundaria}; 
+    //background: ${corSecundaria}; 
     
     width: 80%;   
     
@@ -24,6 +25,7 @@ export const H1 = styled.h1`
     padding: 0;
     margin: 0;
     margin-left: 2.5rem;
+   
 `
 export const Btn = styled.p`   
     opacity: var(--opa);
@@ -39,13 +41,17 @@ export const Btn = styled.p`
     text-decoration: none;
     cursor: pointer;
     
+    @media (max-width: 480px) {        
+       // opacity: 1;     
+    }
+
     &:hover {
     color: ${corTextoHover};
     }
 `
 export const CaixaCard = styled.div`
-   // border: 1px outset #000000; 
-
+    //border: 1px outset #000000; 
+   
     margin: 0 0 30px 0;
     transition: transform 500ms;
     
@@ -80,6 +86,10 @@ export const IMG = styled.img`
     border-radius: 15px 15px 15px 15px;
     -webkit-border-radius: 15px 15px 15px 15px;
     -moz-border-radius: 15px 15px 15px 15px;
+
+    @media (max-width: 480px) {        
+       width: 170px;     
+    }
 `
 export const Figcaption = styled.figcaption`
     text-align: center;

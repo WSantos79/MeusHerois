@@ -5,13 +5,14 @@ import px2vw from '../../utils/px2vw'
 export const Div = styled.div`
 display: flex;
 justify-content: space-between;
-width: 60.6rem; // 58.6rem;
+width: ${px2vw(969.6)};
 margin: 3rem auto 0.5rem auto;
 
 @media (max-width: 480px) {        
   flex-direction: column-reverse;
   margin-top: 4rem;
-  
+  align-items: center;
+  justify-content: center;
 }
 `;
 
@@ -34,6 +35,15 @@ grid-template-areas:
 "Primeiro Primeiro ."
 "Segundo Terceiro ."
 "Segundo Terceiro .";
+
+@media (max-width: 480px) {        
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  
+}
 `;
 export const ContainerUm = styled.div`
 width: 89%;
@@ -42,15 +52,24 @@ text-align: center;
 grid-area: Primeiro;
 //justify-self: center;
 // background-color: blue;
+
+@media (max-width: 480px) {        
+  grid-area: none;
+  position: absolute;
+  top: 9.5rem;
+}
 `;
 export const ContainerDois = styled.div`
 grid-area: Segundo;
 //background-color: purple;
 justify-self: stretch;
 align-self: start; 
-display: flex;
-//word-wrap: break-word; 
-width: 95%;
+
+
+@media (max-width: 480px) {  
+  grid-area: none;  
+  align-self: center;
+}
 
 `;
 export const ContainerTres = styled.div`
@@ -60,7 +79,11 @@ justify-self: start;
 align-self: start;
 display: flex;
 word-wrap: break-word;
-width: 78%;
+
+@media (max-width: 480px) {        
+  grid-area: none;
+  align-self: center;
+}
 
 `;
 
@@ -80,6 +103,7 @@ margin: 4px;
 // background-color: lightblue;
 padding-left: 2px;
 padding-top: 5px;
+
 `;
 export const Item = styled.li`
 margin-bottom: 3px;
