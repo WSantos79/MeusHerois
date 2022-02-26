@@ -42,7 +42,7 @@ export const Btn = styled.p`
     cursor: pointer;
     
     @media (max-width: 480px) {        
-       // opacity: 1;     
+       opacity: 1;     
     }
 
     &:hover {

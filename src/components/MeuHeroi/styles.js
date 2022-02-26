@@ -84,7 +84,6 @@ word-wrap: break-word;
   grid-area: none;
   align-self: center;
 }
-
 `;
 
 export const Titulo = styled.span`
