@@ -5,8 +5,16 @@ import px2vw from '../../utils/px2vw'
 export const Div = styled.div`
 display: flex;
 justify-content: space-between;
-width: ${px2vw(969.6)};
+width: ${px2vw(969.6)}; //60.6rem 969.6px
 margin: 3rem auto 0.5rem auto;
+
+background: black;
+
+@media (max-width: 915px) {        
+  justify-content: center;
+  flex-direction: column-reverse;
+  align-items: center;
+}
 
 @media (max-width: 480px) {        
   flex-direction: column-reverse;
@@ -20,21 +28,27 @@ export const DivTwo = styled.div`
 // justify-content: flex-start;
 // align-items: flex-start;
 // align-content: flex-start;
-width: 66%;
-//  background-color: #2f1d58;
+
+ display: flex;
+}
+  background-color: #2f1d58;
 `;
 
 export const Container = styled.div`
-width: 100%;
-//  background-color: green;
+background-color: green;
 display: grid;
-grid-template-columns: 0.5fr 0.5fr 2fr;
+grid-template-columns: 0.5fr 0.5fr 1fr;
 grid-template-rows: 0.7fr 2.5fr 1fr;
 gap: 0px 0px;
 grid-template-areas:    
 "Primeiro Primeiro ."
 "Segundo Terceiro ."
 "Segundo Terceiro .";
+
+@media (max-width: 915px) {        
+    
+  
+}
 
 @media (max-width: 480px) {        
   display: flex;
@@ -46,22 +60,24 @@ grid-template-areas:
 }
 `;
 export const ContainerUm = styled.div`
-width: 89%;
+
 // margin-left: 70px;
 text-align: center;
 grid-area: Primeiro;
 //justify-self: center;
-// background-color: blue;
+background-color: blue;
 
 @media (max-width: 480px) {        
   grid-area: none;
   position: absolute;
   top: 9.5rem;
 }
+
+
 `;
 export const ContainerDois = styled.div`
 grid-area: Segundo;
-//background-color: purple;
+background-color: purple;
 justify-self: stretch;
 align-self: start; 
 
@@ -74,8 +90,8 @@ align-self: start;
 `;
 export const ContainerTres = styled.div`
 grid-area: Terceiro;
-//background-color: white;
-justify-self: start;
+background-color: white;
+justify-self: stretch;
 align-self: start;
 display: flex;
 word-wrap: break-word;
@@ -119,6 +135,11 @@ export const Card = styled.div`
     margin-top: auto;
     position: relative;
     width: 300px;
+
+    @media (max-width: 915px) {        
+      margin-bottom: 1rem;
+  
+    }
 
     &:before {
       position: absolute;
