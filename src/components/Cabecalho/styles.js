@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { corBanner } from '../UI/variaveis';
 
-
 export const Cabecalho = styled.div`
     display:flex;
     justify-content: center;
@@ -29,6 +28,9 @@ export const Banner = styled.h1`
     -webkit-text-fill-color: transparent;
 
     @media (max-width: 480px) {        
-        font-size: 60px;
-      }
+      font-size: 60px;
+    }
+    @media (min-width: 481px) and (max-width: 1080px) { 
+      font-size: 90px;
+    }
 `

@@ -41,9 +41,9 @@ export const Btn = styled.p`
     text-decoration: none;
     cursor: pointer;
     
-    @media (max-width: 480px) {        
+    @media (max-width: 1080px) {        
        opacity: 1;     
-    }
+    }    
 
     &:hover {
     color: ${corTextoHover};
