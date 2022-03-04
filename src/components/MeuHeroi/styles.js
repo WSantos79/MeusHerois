@@ -60,6 +60,7 @@ grid-area: Primeiro;
   grid-area: none;
   position: absolute;
   top: 9.5rem;
+  
 }
 
 @media (min-width: 481px) and (max-width: 1080px) {        
@@ -67,7 +68,7 @@ grid-area: Primeiro;
   position: absolute;
   top: 12.5rem;
 
-  text-align: normal;
+  //text-align: normal;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,8 +103,7 @@ word-wrap: break-word;
 export const Titulo = styled.span`
 justify-self: center;
 margin-top: 0;
-padding-top: 0;
-margin-left: 2rem;
+padding: 0;
 font-weight: 700;
 font-size: 1.9rem;
 `;
@@ -201,6 +201,11 @@ height: 2rem;
 @media (max-width: 480px) {        
   width: 20rem;
 }
+@media (min-width: 481px) and (max-width: 1080px) {        
+  width: 35rem;
+}
+
+
 `;
 
 export const Alert = styled.span`  
