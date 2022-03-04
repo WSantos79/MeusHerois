@@ -192,7 +192,7 @@ display: flex;
 margin: 1rem auto 0 auto;
 width: 40rem;
 height: 2rem;
-  
+
 &:focus {
   border-color: ${corBanner};
   outline: 1px solid ${corBanner};
@@ -203,21 +203,6 @@ height: 2rem;
 }
 @media (min-width: 481px) and (max-width: 1080px) {        
   width: 35rem;
-}
-
-
-`;
-
-export const Alert = styled.span`  
-position: absolute;
-margin: 0.2rem;
-padding: 0;
-left: 50%;
-transform: translate(-50%, 0);  
-color: red;
-
-@media (max-width: 480px) {        
-  width: 20rem;
 }
 `;
 

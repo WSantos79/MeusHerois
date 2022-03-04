@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef, useContext } from "react";
 import { busca } from "../../api/api";
+import { corBanner } from "../UI/variaveis";
 import {
   Div,
   DivTwo,
@@ -15,8 +16,7 @@ import {
   CardImagem,
   Img,
   Loading,
-  Input,
-  Alert,
+  Input  
 } from "./styles";
 import appConfig from "../../config.json";
 import { SeeHeroContext } from "../../commom/context/SeeHero";
@@ -53,23 +53,28 @@ export default () => {
 
   return (
     <>
+  { //    appConfig.isShow && (
+    //    <Alert>
+    //      Herói não encontrado. Escreva em inglês e tente com hífen ex:
+    //      Spider-Man
+    //    </Alert>
+    //  ) 
+      }
+
       <Input
         onKeyPress={(e) => {
           if (e.key === "Enter") {
             e.preventDefault();
             setDigitado(e.target.value);
+            e.target.value = '';
           }
         }}
         type="search"
-        placeholder="Busque seu Herói"
-      ></Input>
+        placeholder={appConfig.isShow ?  `Herói não encontrado. Escreva em inglês.` : `Busque seu Herói`}
 
-      {appConfig.isShow && (
-        <Alert>
-          Herói não encontrado. Escreva em inglês e tente com hífen ex:
-          Spider-Man
-        </Alert>
-      )}
+        //style={{color: `${appConfig.isShow ? 'red' : 'black'}`, fontWeight: `${appConfig.isShow ? 'bold' : 'normal'}` }}
+        
+      ></Input>
 
       {!heroi.id && (
         <Loading>
