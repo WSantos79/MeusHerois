@@ -57,7 +57,6 @@
       { "name": "Superman","id": "644", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/644-superman.jpg" },
       { "name": "Batman","id": "70", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/70-batman.jpg" },
       { "name": "Wonder Woman","id": "720", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/720-wonder-woman.jpg" },
-      { "name": "Shazam","id": "156", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/156-captain-marvel.jpg" },
       { "name": "Green Arrow","id": "298", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/298-green-arrow.jpg" },
       { "name": "Black Canary","id": "98", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/98-black-canary.jpg" },
       { "name": "Red Tornado","id": "551", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/551-red-tornado.jpg" },
@@ -68,8 +67,9 @@
       { "name": "Martian Manhunter","id": "432", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/432-martian-manhunter.jpg" },
       { "name": "Firestorm","id": "261", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/261-firestorm.jpg" },
       { "name": "Doctor Fate","id": "224", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/224-doctor-fate.jpg" },
-
+      
       { "name": "Lobo","id": "413", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/413-lobo.jpg" },
+      { "name": "Shazam","id": "156", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/156-captain-marvel.jpg" },
       { "name": "Atom","id": "53", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/53-atom-ii.jpg" },
       { "name": "Black Lightning","id": "103", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/103-black-lightning.jpg" },
       { "name": "Cyborg","id": "194", "img": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/sm/194-cyborg.jpg" },
