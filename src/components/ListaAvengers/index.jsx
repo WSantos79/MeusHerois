@@ -1,9 +1,18 @@
 import React, { useState, useContext } from "react";
 import appConfig from "../../config.json";
 import { SeeHeroContext } from "../../commom/context/SeeHero";
-import { Area, Btn, Lista, H1, Div, CaixaCard, CardSecundario, IMG, Figcaption } from "../UI";
+import {
+  Area,
+  Btn,
+  Lista,
+  H1,
+  Div,
+  CaixaCard,
+  CardSecundario,
+  IMG,
+  Figcaption,
+} from "../UI";
 import { scrollToTop } from "../ScrollTop";
-
 
 export default () => {
   const { setId } = useContext(SeeHeroContext);
@@ -31,6 +40,7 @@ export default () => {
     <>
       <Area>
         <Btn
+          style={{ opacity: `${scroll === 0 ? "0" : "1"}` }}
           onClick={() => {
             handleLeft();
           }}

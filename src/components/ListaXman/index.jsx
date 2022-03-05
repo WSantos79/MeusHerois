@@ -17,6 +17,7 @@ import { scrollToTop } from "../ScrollTop";
 export default () => {
   const { setId } = useContext(SeeHeroContext);
   const [scroll, setScroll] = useState(0);
+  const maxScroll = appConfig.xman.length * 197;
 
   function handleLeft() {
     let pixel = scroll + Math.round(window.innerWidth / 2);
@@ -28,7 +29,7 @@ export default () => {
 
   function handleRight() {
     let pixel = scroll - Math.round(window.innerWidth / 2);
-    let listaLargura = appConfig.xman.length * 197;
+    let listaLargura = maxScroll;
 
     if (window.innerWidth - listaLargura > pixel) {
       pixel = window.innerWidth - listaLargura;
@@ -43,6 +44,8 @@ export default () => {
           onClick={() => {
             handleLeft();
           }}
+
+          style={{ opacity: `${scroll === 0 ? '0' : '1'}` }}
         >
           &#10094;
         </Btn>
@@ -51,7 +54,7 @@ export default () => {
           <Div
             style={{
               marginLeft: scroll,
-              width: appConfig.xman.length * 197, // qnt de item x a largura deles
+              width: maxScroll, // qnt de item x a largura deles
             }}
           >
             {appConfig.xman.map((heroi) => {
@@ -79,6 +82,7 @@ export default () => {
           onClick={() => {
             handleRight();
           }}
+          //style={{ opacity: `${scroll <= -2734 ? '0' : '1'}` }}
         >
           &#10095;
         </Btn>
@@ -86,3 +90,12 @@ export default () => {
     </>
   );
 };
+
+/*
+
+
+<script src="../../utils/dragscroll.js"></script>
+
+
+
+*/

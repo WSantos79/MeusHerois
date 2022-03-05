@@ -42,8 +42,8 @@ export const Btn = styled.p`
     cursor: pointer;
     
     @media (max-width: 1080px) {        
-       opacity: 1;     
-    }    
+       display: none;     
+    }
 
     &:hover {
     color: ${corTextoHover};
@@ -62,7 +62,9 @@ export const CaixaCard = styled.div`
 `
 export const Div = styled.div`    
     display: flex;
-    transition: all ease 0.5s;    
+    transition: all ease 0.5s;  
+
+    touch-action: manipulation;  
 
     & ${CaixaCard}:hover, &:focus ${CaixaCard} {
         transform: scale(1.3) ;        

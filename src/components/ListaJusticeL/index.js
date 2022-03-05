@@ -29,9 +29,11 @@ export default () => {
     return (
         <>
             <Area>
-                <Btn onClick={() => {
-                    handleLeft();
-                }}>&#10094;</Btn>
+                <Btn
+                    style={{ opacity: `${scroll === 0 ? '0' : '1'}` }}
+                    onClick={() => {
+                        handleLeft();
+                    }}>&#10094;</Btn>
                 <Lista>
                     <H1>Justice League</H1>
                     <Div style={{
