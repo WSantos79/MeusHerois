@@ -50,10 +50,6 @@ export const Btn = styled.p`
     text-decoration: none;
     cursor: pointer;
     
-    @media (max-width: 1080px) {        
-       display: none;     
-    }
-
     &:hover {
     color: ${corTextoHover};
     }
