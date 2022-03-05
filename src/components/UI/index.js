@@ -20,16 +20,20 @@ export const Lista = styled.div`
     //background: ${corSecundaria}; 
     
     @media (max-width: 1080px) {        
-        overflow: auto;     
+        overflow: auto;
     }
 
-    width: 80%;   
+    width: 80%;
     
 `
 export const H1 = styled.h1`
     padding: 0;
     margin: 0;
-    margin-left: 2.5rem;
+    margin-left: 12.5rem;
+
+    @media (max-width: 1080px) {
+        margin-left: 5rem;
+    }
    
 `
 export const Btn = styled.p`   

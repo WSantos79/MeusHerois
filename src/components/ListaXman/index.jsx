@@ -38,19 +38,20 @@ export default () => {
   }
 
   return (
-    <>
+    <>  
+      <H1>X-Men</H1>
       <Area>
         <Btn
           onClick={() => {
             handleLeft();
           }}
-
+          
           style={{ opacity: `${scroll === 0 ? '0' : '1'}` }}
-        >
+          >
           &#10094;
         </Btn>
         <Lista>
-          <H1>X-Men</H1>
+          
           <Div
             style={{
               marginLeft: scroll,

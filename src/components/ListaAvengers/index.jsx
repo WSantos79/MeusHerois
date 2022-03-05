@@ -38,6 +38,7 @@ export default () => {
 
   return (
     <>
+      <H1>Avengers</H1>
       <Area>
         <Btn
           style={{ opacity: `${scroll === 0 ? "0" : "1"}` }}
@@ -48,7 +49,6 @@ export default () => {
           &#10094;
         </Btn>
         <Lista>
-          <H1>Avengers</H1>
           <Div
             style={{
               marginLeft: scroll,
