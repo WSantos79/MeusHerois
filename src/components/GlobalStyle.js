@@ -14,6 +14,26 @@ body {
   outline: 0;
   box-sizing: border-box;
   
+  scrollbar-width: thin;
+  scrollbar-color: ${corPrimaria} ${corPrimaria};
 }
+
+/* Works on Firefox */
+
+/* Works on Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+body::-webkit-scrollbar-track {
+  background: ${corPrimaria};
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: ${corPrimaria};
+  border-radius: 0px;
+  border: 0px solid ${corPrimaria};
+}
+
 
 `
