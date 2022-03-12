@@ -16,14 +16,13 @@ export const Area = styled.div`
 export const Lista = styled.div`
     position: relative;   
     overflow: hidden;
+    width: 80%;
 
-    //background: ${corSecundaria}; 
+   // background: purple; 
     
     @media (max-width: 1080px) {        
         overflow: auto;
-    }
-
-    width: 80%;
+    }    
     
 `
 export const H1 = styled.h1`
@@ -61,7 +60,7 @@ export const Btn = styled.p`
 export const CaixaCard = styled.div`
     //border: 1px outset #000000; 
    
-    margin: 0 0 30px 0;
+    margin: 30px 0 30px 0;
     transition: transform 500ms;
     
     &:hover ~ &, &:focus ~ &{
