@@ -27,14 +27,3 @@ function App() {
 }
 
 export default App;
-
-
-/*
-
-<Switch>
-          
-<PaginaInicial />
-        </Switch>
-
-
-        */

@@ -16,7 +16,7 @@
 
 ## :heavy_check_mark: **Descrição**
 
-Projeto em desenvolvimento...
+Projeto desenvolvido para praticar e aprender novas habilidades. O site consiste em apresentar heróis e suas habilidades através do consumo de uma API.
 
 ## :hammer: **Tecnologias**
 

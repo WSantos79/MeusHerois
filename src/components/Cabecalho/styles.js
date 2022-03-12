@@ -28,7 +28,7 @@ export const Banner = styled.h1`
     -webkit-text-fill-color: transparent;
 
     @media (max-width: 480px) {        
-      font-size: 60px;
+      font-size: 55px;
     }
     @media (min-width: 481px) and (max-width: 1080px) { 
       font-size: 90px;
