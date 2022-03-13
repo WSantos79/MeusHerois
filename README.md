@@ -1,4 +1,4 @@
-# <p align="center"> :star: MeusHeróis</p>
+# <p align="center"> :star: Meus Heróis</p>
 
 ## :mag: Veja o projeto online !
 
